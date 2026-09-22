@@ -959,7 +959,7 @@ function viewOnboarding(root, done) {
   function nav(nextOk, backOk) { return h("div", { class: "foot", style: "display:flex;gap:8px;margin-top:16px" }, step > 0 ? h("button", { class: "btn sec", type: "button", onClick: () => { step--; render(); } }, "Back") : null, h("button", { class: "btn", type: "submit", style: "flex:1" }, step === steps.length - 1 ? "Open my budget" : "Continue")); }
   function welcome() {
     const f = UI.form([
-      { k: "name", label: "What should we call you? (optional)", type: "text", placeholder: "Zaid" },
+      { k: "name", label: "What should we call you? (optional)", type: "text", placeholder: "Zee" },
       { k: "currency", label: "Currency", type: "select", options: CURRENCIES },
       { k: "mode", label: "Plan by", type: "chips", options: [["paycheck", "Paycheck"], ["month", "Calendar month"]], hint: "Paycheck mode shows what's safe to spend until your next payday. You can switch later." },
     ], { name: draft.name, currency: draft.currency, mode: draft.mode || "paycheck" }, (o) => { Object.assign(draft, o); step++; render(); }, { submitLabel: "Continue" });
